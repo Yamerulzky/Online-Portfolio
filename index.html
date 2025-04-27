@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rhea Mae Rulona | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to bottom right, #fdfbfb, #ebedee);
+      color: #333;
+      line-height: 1.7;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+    }
+    header img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding: 10px 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #fcd34d;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      color: #333;
+      border-left: 5px solid #6a11cb;
+      padding-left: 15px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      padding: 15px;
+      border-left: 3px solid #2575fc;
+      background: #f7f8fa;
+      border-radius: 8px;
+    }
+    .project h3 {
+      margin-bottom: 5px;
+      color: #444;
+    }
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      background: #2575fc;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .project a:hover {
+      background: #6a11cb;
+    }
+
+    ul.socials {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    ul.socials li a {
+      text-decoration: none;
+      color: #2575fc;
+      font-size: 1.1em;
+    }
+    ul.socials li a i {
+      margin-right: 8px;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="me.jpg" alt="Rhea Mae Profile">
+    <h1>Rhea Mae C. Rulona</h1>
+    <p>Computer Engineering Student in University of Bohol</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>My name is Rhea Mae Rulona, and I enjoy spending my time reading books, listening to music,
+       and watching movies. These hobbies allow me to explore different perspectives and expand my
+       imagination. Reading is like traveling to new worlds without leaving home, while music helps me
+       express emotions that words sometimes cannot. Movies, on the other hand, inspire me with
+       their stories and characters. I love how each hobby helps me grow and learn something new
+       about the world and myself.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>My Work</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>About Me</h3>
+        <p>A simple website that talks About me.</p>
+        <a href="link-to-project.com" target="_blank">View Project</a>
+      </div>
+      <div class="project">
+        <h3>Related Links</h3>
+        <p>A simple site that relate our links.</p>
+        <a href="link-to-project.com" target="_blank">View Project</a>
+      </div>
+	<div class="project">
+        <h3>Quotations</h3>
+        <p>A simple site that has quotes.</p>
+        <a href="link-to-project.com" target="_blank">View Project</a>
+      </div>
+	<div class="project">
+        <h3>Friend Registration Form</h3>
+        <p>A friend registration form</p>
+        <a href="link-to-project.com" target="_blank">View Project</a>
+      </div>
+	<div class="project">
+        <h3>Curriculum Vitae</h3>
+        <p>A code vitae.</p>
+        <a href="https://github.com/Yamerulzky/new-repository/blob/main/Curriculum%20Vitae.html" target="_blank">View Project</a>
+      </div>
+	<div class="project">
+        <h3>Mapping</h3>
+        <p>A simple mapping of our group photo.</p>
+        <a href="link-to-project.com" target="_blank">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>Getting Started With AVR Assembly Language</h3>
+        <p>For his/her active participation, in recognition of their valuable engagement in the seminar entitled 'Getting Started With AVR Assembly Language,' 
+        held on the 5th of October 2024 at the UB IRC, Tagbilaran City, Bohol, Philippines.</p>
+        <a href="1745424759116.png" target="_blank">View Certificate</a>
+      </div>
+      <div class="project">
+        <h3>COMPESTA 2024: Spark & Connect: Building Ideas, Uniting Minds</h3>
+        <p>For their outstanding participation and contribution during the Programmathon event held as part of COMPFESTA 2024: Spark & Connect: Building Ideas, 
+        Uniting Minds on December 14, 2024, at the HS Activity Center, University of Bohol. Your dedication and enthusiasm in advancing programming skills and fostering 
+        innovation are deeply appreciated.</p>
+        <a href="1745424738831.jpg" target="_blank">View Certificate</a>
+      </div>
+      <div class="project">
+        <h3>International Online Webinar "Hybrid AGV-drone using YOLOv8 and Arduino-Raspberry Pi for defect detection and structural 
+        health monitoring in built infrastructure"</h3>
+        <p>for having actively participated in the international online webinar "Hybrid AGV-drone using YOLOv8 and Arduino-Raspberry Pi for defect detection and structural 
+        health monitoring in built infrastructure" organized by the Institute of Computer Engineers of the Philippines Singapore, in collaboration with Institute of Computer Engineers of the 
+        Philippines. Kingdom of Saudi Arabia Chapter, held on March 22, 2025.
+        Given this 22nd day of March 2025 via online seminar.</p>
+        <a href="1745424738814.jpg" target="_blank">View Certificate</a>
+      </div>
+      <div class="project">
+        <h3>"SUMOBOT WORKSHOP: CODE,CREATE, COMPETE"</h3>
+		<p>For his/her active engagement and valuable contribution in the seminar entitled "SUMOBOT WORKSHOP: CODE, CREATE, COMPETE", 
+        given this 29th of March 2025 at the UB IMC and HS Activity Center, Tagbilaran City,
+        Bohol, Philippines.</p>
+        <a href="1745498361349.jpg" target="_blank">View Certificate</a>
+      </div>
+      <div class="project">
+        <h3>International Online Webinar "AI and Prom Engineering in Educational Settings"</h3>
+        <p>For having actively participated in the international online webinar "AI and Prom Engineering in Educational Settings" organized by the Institute 
+        of Computer Engineers of the Philippines - Singapore, in collaboration with the Institute of Computer Engineers of the Philippines - Kingdom of Saudi Arabia 
+        Chapter, held on April 5, 2025. Given this 5th day of April 2025 via Zoom.</p>
+        <a href="1745424738794.jpg" target="_blank">View Certificate</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to get in touch, feel free to reach out via email or social media.</p>
+    <ul class="socials">
+      <li><a href="mailto:rmcrulona@universityofbohol.edu.ph"><i class="fas fa-envelope"></i>Email</a></li>
+      <li><a href="https://facebook.com/rheamae.rulona.50" target="_blank"><i class="fab fa-facebook"></i>Facebook</a></li>
+      <li><a href="https://instagram.com/yamerulzky" target="_blank"><i class="fab fa-instagram"></i>Instagram</a></li>
+      <li><a href="https://linkedin.com/in/rhea-mae-rulona-ab9552350/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
+      <li><a href="https://github.com/Yamerulzky" target="_blank"><i class="fab fa-github"></i>GitHub</a></li>
+      <li><a href="https://tiktok.com/@yamerulzky" target="_blank"><i class="fab fa-tiktok"></i>TikTok</a></li>
+      <li><a href="https://youtube.com/@maerulzky5738" target="_blank"><i class="fab fa-youtube"></i>YouTube</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rhea Mae Rulona. All rights reserved.</p>
+  </footer>
+</body>
+</html>
