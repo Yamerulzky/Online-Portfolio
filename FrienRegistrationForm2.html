@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('star.gif'); /* Your GIF URL */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding is included in width */
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="date"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #66afe9;
+            outline: none; /* Removes the default outline */
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two columns layout */
+            gap: 20px; /* Space between grid items */
+        }
+        .hobbies-selection {
+            grid-column: span 2; /* Make hobbies span both columns */
+        }
+        .bio-section {
+            grid-column: span 2; /* Make bio span both columns */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Friend Registration Form</h2>
+    <form id="registrationForm" action="/submit" method="POST">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <div class="error" id="nameError"></div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <div class="error" id="emailError"></div>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <div class="error" id="phoneError"></div>
+        </div>
+        <div class="form-group">
+            <label for="birthdate">Birth Date:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+            <div class="error" id="birthdateError"></div>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required>
+            <div class="error" id="ageError"></div>
+        </div>
+        
+        <div class="grid-container">
+            <div class="form-group">
+                <label for="country">Select Country:</label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>Select your country</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="australia">Australia</option>
+                    <option value="india">India</option>
+					<option value="philippines">Philippines</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="error" id="countryError"></div>
+            </div>
+
+            <div class="form-group hobbies-selection">
+                <label>Select Hobbies:</label>
+                <input type="checkbox" id="reading" name="hobbies" value="reading">
+                <label for="reading">Reading</label><br>
+                <input type="checkbox" id="traveling" name="hobbies" value="traveling">
+                <label for="traveling">Traveling</label><br>
+                <input type="checkbox" id="gaming" name="hobbies" value="gaming">
+                <label for="gaming">Gaming</label><br>
+                <input type="checkbox" id="sports" name="hobbies" value="sports">
+                <label for="sports">Sports</label><br>
+                <div class="error" id="hobbiesError"></div>
+            </div>
+
+        <div class="form-group">
+            <label for="facebook">Facebook Account:</label>
+            <input type="text" id="facebook" name="facebook">
+        </div>
+	</div>
+	
+        <div class="form-group">
+            <label for="instagram">Instagram Account:</label>
+            <input type="text" id="instagram" name="instagram">
+			<div class="form-group bio-section">
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" rows="4" required placeholder="Tell us about yourself..."></textarea>
+                <div class="error" id="bioError"></div>
+            </div>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        let valid = true;
+
+        // Clear previous error messages
+        document.querySelectorAll('.error').forEach(function(error) {
+            error.textContent = '';
+        });
+
+        // Validate name
+        if (document.getElementById('name').value.trim() === '') {
+            document.getElementById('nameError').textContent = 'Name is required.';
+            valid = false;
+        }
+
+        // Validate email
+        if (document.getElementById('email').value.trim() === '') {
+            document.getElementById('emailError').textContent = 'Email is required.';
+            valid = false;
+        }
+
+        // Validate phone
+        if (document.getElementById('phone').value.trim() === '') {
+            document.getElementById('phoneError').textContent = 'Phone number is required.';
+            valid = false;
+        }
+
+        // Validate birthdate
+        if (document.getElementById('birthdate').value.trim() === '') {
+            document.getElementById('birthdateError').textContent = 'Birth date is required.';
+            valid = false;
+        }
+
+        // Validate age
+        if (document.getElementById('age').value.trim() === '') {
+            document.getElementById('ageError').textContent = 'Age is required.';
+            valid = false;
+        }
+
+        // Validate country
+        if (document.getElementById('country').value === '') {
+            document.getElementById('countryError').textContent = 'Country is required.';
+            valid = false;
+        }
+
+        // Validate hobbies
+        const hobbies = document.querySelectorAll('input[name="hobbies"]:checked');
+        if (hobbies.length === 0) {
+            document.getElementById('hobbiesError').textContent = 'At least one hobby must be selected.';
+            valid = false;
+        }
+
+        // Validate bio
+        if (document.getElementById('bio').value.trim() === '') {
+            document.getElementById('bioError').textContent = 'Bio is required.';
+            valid = false;
+        }
+
+        // Prevent form submission if validation fails
+        if (!valid) {
+            event.preventDefault();
+        }
+    });
+</script>
+
+</body>
+</html>
